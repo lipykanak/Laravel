@@ -24,13 +24,21 @@
                     <div class="main-game-content">
                         <div class="video-box">
                             <figure id="myvideo">
-
+                                <div class="frame-container">   
                                 {{-- <img src="{{url('frontend/images/more/v1.png')}}" width="100%"> --}}
-                                <img src="{{ asset($game->game_thumb) }}" width="100%" />
-
-                                <figcaption><a href="#" class="btn">Play Game</a>
-                                    <h5>{{ $game->name }}</h5>
-                                </figcaption>
+                               
+                                <button onclick="navigate()" class="btn">
+                                    <figcaption><a href="{{ $game->ifame_url }}" target="iframe_a" class="btn" >Play Game</a>
+                                        <h2>{{ $game->name }}</h2>
+                                    </figcaption>
+                               </button>
+                               <iframe scrolling="auto" allowtransparency="true" name="iframe_a" style="Opacity:0.3;width:100%;height:430px;background:url({{ asset($game->game_thumb) }}) no-repeat center center; 
+                                -webkit-background-size: cover;
+                                -moz-background-size: cover;
+                                -o-background-size: cover;
+                                background-size: cover;"> </iframe>
+                                </div>
+                               
                             </figure>
                         </div>
                         <div class="nit-flex jcsb">

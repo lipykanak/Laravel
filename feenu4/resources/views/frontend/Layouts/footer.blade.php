@@ -246,6 +246,30 @@ $(document).ready(function(){
 
 
 </script>
+<script>
+    function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+    
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "share"; 
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "share"; 
+        moreText.style.display = "inline";
+      }
+    }
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('a[target="iframe_a"]').click(function(){
+                $(this).parent().hide();
+            });
+        });
+        </script>
 
 </body>
 </html>
