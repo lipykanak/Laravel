@@ -188,10 +188,6 @@ header .nit-upper-nav .nit-flex .nit-right ul li form ::-moz-placeholder {
   color: grey;
   font-style: oblique;
 }
-header .nit-upper-nav .nit-flex .nit-right ul li form :-ms-input-placeholder {
-  color: grey;
-  font-style: oblique;
-}
 header .nit-upper-nav .nit-flex .nit-right ul li form ::placeholder {
   color: grey;
   font-style: oblique;
@@ -369,7 +365,6 @@ header .nit-upper-nav .nit-flex .nit-right ul li .nit-userAc .nit-dropdown a:las
   border-top: 1px solid #ddd;
   justify-content: flex-start;
   background: #fff;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   width: 350px;
@@ -442,8 +437,7 @@ main .nit-loader .spinner-border {
   width: 2rem;
   height: 2rem;
   border-style: dotted;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  animation-duration: 2s;
 }
 main .nit-content-new {
   margin-top: 0.5rem;
@@ -1184,10 +1178,6 @@ main .nit-content ul li a figcaption {
   color: grey;
   font-style: oblique;
 }
-#newMobileMenu .nit-search-form form :-ms-input-placeholder {
-  color: grey;
-  font-style: oblique;
-}
 #newMobileMenu .nit-search-form form ::placeholder {
   color: grey;
   font-style: oblique;
@@ -1284,10 +1274,6 @@ main .nit-content ul li a figcaption {
   margin-top: 30px;
 }
 .nit-mobile-box form ::-moz-placeholder {
-  color: grey;
-  font-style: oblique;
-}
-.nit-mobile-box form :-ms-input-placeholder {
   color: grey;
   font-style: oblique;
 }
