@@ -107,35 +107,25 @@
                                 <a href="#">online game</a>
                             </div>
                             <div class="app-box">
-                                <a href="#"><img src="{{ url('frontend/images/icons/apple.png') }}"
-                                        alt=""></a>
-                                <a href="#"><img src="{{ url('frontend/images/icons/google-play.png') }}"
-                                        alt=""></a>
+                                <a href="{{$game->app_store_link}}"><img src="{{url('frontend/images/icons/apple.png')}}" alt=""></a>
+                                <a href="{{$game->google_store_link}}"><img src="{{url('frontend/images/icons/google-play.png')}}" alt=""></a>
+                             
                             </div>
                         </div>
                         <div class="dis-box">
                             <h1>Description</h1>
                             <div class="con">
-                                <p>Moto X3M 5: Pool Party is the 5th awesome title in the Moto X3M series. The gameplay is
-                                    just as exciting - you control
-                                    a motocross bike and must work your way through a series of levels as fast as you can.
-                                </p>
-                                <p>The theme of this title is a pool party – you encounter everything from the sunshine and
-                                    waterslides to giant tubes and umbrellas. The beach setting is fantastic and the new
-                                    levels really are fun to play. Can you show off your stunt skills and become a top Moto
-                                    X3M racer? <a href="#" class="less">show less</a></p>
+                                <p>{{$game->description}} <a>show less</a></p>
                             </div>
                             <div class="row">
                                 <div class="col-md-5 mr-auto">
                                     <h1>How to play</h1>
-                                    <p>Use Mouse to play Knock Off Placerat
-                                        referrentur per te, ea vel electram
-                                        forensibus. In odio forensibus duo. </p>
+                                    <p>{{$game->how_to_play}} </p>
                                 </div>
                                 <div class="col-md-5 ml-auto">
                                     <h1>Walkthrough Video</h1>
-                                    <div class="nit-video"><img src="{{ url('frontend/images/more/v3.png') }}"
-                                            class="tni" alt=""></div>
+                                    <div class="nit-video"><iframe src="{{$game->walk_through_link}}" width="100%" height="200" style="border:none;">
+                                    </iframe></div>
                                 </div>
                             </div>
                         </div>

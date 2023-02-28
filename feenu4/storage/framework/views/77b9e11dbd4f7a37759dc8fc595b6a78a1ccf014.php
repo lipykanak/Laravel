@@ -71,15 +71,17 @@
                                         <li class="favorite-btn" data-url="<?php echo e(route('update-favorite-status')); ?>"  data-game-id="<?php echo e($game->game_id); ?>" data-favorite-status=<?php if($favoriteStatus): ?> "0" <?php else: ?> "1" <?php endif; ?>><i class="<?php if($favoriteStatus): ?> fas <?php else: ?> far <?php endif; ?> fa-heart" style="color: red;cursor: pointer;" ></i></li>
                                         <li class="like-dislike-btn like-btn" data-url="<?php echo e(route('update-like-status')); ?>"  data-game-id="<?php echo e($game->game_id); ?>" data-like-status="1"><i class="<?php echo e($likeBtnClass); ?> fa-thumbs-up" style="cursor: pointer;"></i><span><?php echo e($game->likeCount()); ?></span></li>
                                         <li class="like-dislike-btn dislike-btn" data-url="<?php echo e(route('update-like-status')); ?>"  data-game-id="<?php echo e($game->game_id); ?>" data-like-status="0"><i class="<?php echo e($dislikeBtnClass); ?> fa-thumbs-down" style="cursor: pointer;"></i><span><?php echo e($game->dislikeCount()); ?></span></li>
-                                        <li><span>Share</span><i class="fas fa-share-alt"></i>
-                                            <ul class="socials">
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-google"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-                                                <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                                        <div class="shareBox">
+                                             
+                                            <button onclick="myFunction()" id="myBtn">share<i class="fa fa-share" style="font-size:14px;color:rgb(22, 189, 97)"></i></button>
+                                            <ul><span id="dots"></span><span id="more"><a href="#" class="fab fa-facebook"></a>
+                                                <a href="#" class="fab fa-twitter"></a>
+                                                    <a href="#" class="fab fa-google"></a>
+                                                        <a href="#" class="fab fa-linkedin"></a>
+                                                           <a href="#" class="fab fa-youtube"></a>
+                                                          <a href="#" class="fab fa-instagram"></a></span>
                                             </ul>
-                                        </li>
+                                        </div
                                     </ul>
                                 </div>
                                 <div class="rating">
@@ -104,35 +106,25 @@
                                 <a href="#">online game</a>
                             </div>
                             <div class="app-box">
-                                <a href="#"><img src="<?php echo e(url('frontend/images/icons/apple.png')); ?>"
-                                        alt=""></a>
-                                <a href="#"><img src="<?php echo e(url('frontend/images/icons/google-play.png')); ?>"
-                                        alt=""></a>
+                                <a href="<?php echo e($game->app_store_link); ?>"><img src="<?php echo e(url('frontend/images/icons/apple.png')); ?>" alt=""></a>
+                                <a href="<?php echo e($game->google_store_link); ?>"><img src="<?php echo e(url('frontend/images/icons/google-play.png')); ?>" alt=""></a>
+                             
                             </div>
                         </div>
                         <div class="dis-box">
                             <h1>Description</h1>
                             <div class="con">
-                                <p>Moto X3M 5: Pool Party is the 5th awesome title in the Moto X3M series. The gameplay is
-                                    just as exciting - you control
-                                    a motocross bike and must work your way through a series of levels as fast as you can.
-                                </p>
-                                <p>The theme of this title is a pool party – you encounter everything from the sunshine and
-                                    waterslides to giant tubes and umbrellas. The beach setting is fantastic and the new
-                                    levels really are fun to play. Can you show off your stunt skills and become a top Moto
-                                    X3M racer? <a href="#" class="less">show less</a></p>
+                                <p><?php echo e($game->description); ?> <a>show less</a></p>
                             </div>
                             <div class="row">
                                 <div class="col-md-5 mr-auto">
                                     <h1>How to play</h1>
-                                    <p>Use Mouse to play Knock Off Placerat
-                                        referrentur per te, ea vel electram
-                                        forensibus. In odio forensibus duo. </p>
+                                    <p><?php echo e($game->how_to_play); ?> </p>
                                 </div>
                                 <div class="col-md-5 ml-auto">
                                     <h1>Walkthrough Video</h1>
-                                    <div class="nit-video"><img src="<?php echo e(url('frontend/images/more/v3.png')); ?>"
-                                            class="tni" alt=""></div>
+                                    <div class="nit-video"><iframe src="<?php echo e($game->walk_through_link); ?>" width="100%" height="200" style="border:none;">
+                                    </iframe></div>
                                 </div>
                             </div>
                         </div>
