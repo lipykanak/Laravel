@@ -33,7 +33,7 @@
                                             </figcaption>
                                     </button>
                                     <iframe scrolling="auto" allowtransparency="true" name="iframe_a" 
-                                    style="Opacity:0.3;width:100%;height:550px;background:url({{ asset($game->game_thumb) }}) no-repeat center center; 
+                                    style="width:100%;height:550px;background:url({{ asset($game->game_thumb) }}) no-repeat center center; 
                                         -webkit-background-size: cover;
                                         -moz-background-size: cover;
                                         -o-background-size: cover;
