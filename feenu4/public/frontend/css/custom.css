@@ -30,15 +30,8 @@
   color: #125688;
 }
 
-    .frame-container {
-      position: relative;
-    }
-    .iframe-button {
-    display: none;
-      position: absolute;
-      top: 200px;
-      left: 380px;
-    }
+    
+
     
     .frame-container:hover .iframe-button {
       display: initial;

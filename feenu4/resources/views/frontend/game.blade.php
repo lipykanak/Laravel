@@ -25,18 +25,20 @@
                         <div class="video-box">
                             <figure id="myvideo">
                                 <div class="frame-container">   
-                                {{-- <img src="{{url('frontend/images/more/v1.png')}}" width="100%"> --}}
-                               
-                                <button onclick="navigate()" class="btn">
-                                    <figcaption><a href="{{ $game->ifame_url }}" target="iframe_a" class="btn" >Play Game</a>
-                                        <h2>{{ $game->name }}</h2>
-                                    </figcaption>
-                               </button>
-                               <iframe scrolling="auto" allowtransparency="true" name="iframe_a" style="Opacity:0.3;width:100%;height:430px;background:url({{ asset($game->game_thumb) }}) no-repeat center center; 
-                                -webkit-background-size: cover;
-                                -moz-background-size: cover;
-                                -o-background-size: cover;
-                                background-size: cover;"> </iframe>
+                                        {{-- <img src="{{url('frontend/images/more/v1.png')}}" width="100%"> --}}
+                                    
+                                        <button onclick="navigate()" class="btn">
+                                            <figcaption><a href="{{ $game->ifame_url }}" target="iframe_a" class="btn" >Play Game</a>
+                                                <h2>{{ $game->name }}</h2>
+                                            </figcaption>
+                                    </button>
+                                    <iframe scrolling="auto" allowtransparency="true" name="iframe_a" 
+                                    style="Opacity:0.3;width:100%;height:550px;background:url({{ asset($game->game_thumb) }}) no-repeat center center; 
+                                        -webkit-background-size: cover;
+                                        -moz-background-size: cover;
+                                        -o-background-size: cover;
+                                        background-size: cover;"> 
+                                    </iframe>
                                 </div>
                                
                             </figure>
@@ -49,7 +51,7 @@
                         </div>
                         <div class="nit-footer">
                             <div class="nit-flex">
-                                <h2>Need For Speed</h2>
+                                <h2>{{ $game->name }}</h2>
                                 <div class="so">
                                     <ul>
                                         @php
@@ -70,15 +72,17 @@
                                         <li class="favorite-btn" data-url="{{route('update-favorite-status')}}"  data-game-id="{{$game->game_id}}" data-favorite-status=@if($favoriteStatus) "0" @else "1" @endif><i class="@if($favoriteStatus) fas @else far @endif fa-heart" style="color: red;cursor: pointer;" ></i></li>
                                         <li class="like-dislike-btn like-btn" data-url="{{route('update-like-status')}}"  data-game-id="{{$game->game_id}}" data-like-status="1"><i class="{{$likeBtnClass}} fa-thumbs-up" style="cursor: pointer;"></i><span>{{$game->likeCount()}}</span></li>
                                         <li class="like-dislike-btn dislike-btn" data-url="{{route('update-like-status')}}"  data-game-id="{{$game->game_id}}" data-like-status="0"><i class="{{$dislikeBtnClass}} fa-thumbs-down" style="cursor: pointer;"></i><span>{{$game->dislikeCount()}}</span></li>
-                                        <li><span>Share</span><i class="fas fa-share-alt"></i>
-                                            <ul class="socials">
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-google"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                                <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-                                                <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                                        <div class="shareBox">
+                                             
+                                            <button onclick="myFunction()" id="myBtn">share<i class="fa fa-share" style="font-size:14px;color:rgb(22, 189, 97)"></i></button>
+                                            <ul><span id="dots"></span><span id="more"><a href="#" class="fab fa-facebook"></a>
+                                                <a href="#" class="fab fa-twitter"></a>
+                                                    <a href="#" class="fab fa-google"></a>
+                                                        <a href="#" class="fab fa-linkedin"></a>
+                                                           <a href="#" class="fab fa-youtube"></a>
+                                                          <a href="#" class="fab fa-instagram"></a></span>
                                             </ul>
-                                        </li>
+                                        </div
                                     </ul>
                                 </div>
                                 <div class="rating">
