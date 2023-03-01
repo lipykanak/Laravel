@@ -21,6 +21,10 @@
                     <form action="" method="post" enctype='multipart/form-data'>
                         <?php echo csrf_field(); ?>
                         <div class="mb-3">
+                            <label for="name" class="form-label">Game Name</label>
+                            <input type="text" class="form-control" id="name" name="name" value="<?php if(!empty($game)): ?><?php echo e($game->name); ?><?php endif; ?>" required>
+                        </div>
+                        <div class="mb-3">
                             <label for="category" class="form-label">Category</label>
                             <select class="form-control" id="category" name="category" required>
                                 <option value="">Select Category</option>
@@ -29,18 +33,35 @@
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                             </select>
                         </div>
+                       
                         <div class="mb-3">
-                            <label for="name" class="form-label">Game Name</label>
-                            <input type="text" class="form-control" id="name" name="name" value="<?php if(!empty($game)): ?><?php echo e($game->name); ?><?php endif; ?>" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="link" class="form-label">Game Image</label>
+                            <label for="image" class="form-label">Game Image</label>
                             <input type="file" class="form-control" id="game_thumb" name="game_thumb" value="<?php if(!empty($game)): ?> <img src=<?php echo e(asset($game->game_thumb)); ?> <?php endif; ?>">
 
                         </div>
                         <div class="mb-3">
-                            <label for="link" class="form-label">Game Url</label>
-                            <input type="text" class="form-control" id="ifame_url" name="ifame_url" value="<?php if(!empty($game)): ?><?php echo e($game->ifame_url); ?><?php endif; ?>" required>
+                            <label for="link" class="form-label">Iframe Url</label>
+                            <input type="text" class="form-control" id="ifame_url" name="ifame_url" value="<?php if(!empty($game)): ?><?php echo e($game->ifame_url); ?><?php endif; ?>" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="link" class="form-label">Walkthrough Video</label>
+                            <input type="text" class="form-control" id="walk_through_link" name="walk_through_link" value="<?php if(!empty($game)): ?><?php echo e($game->walk_through_link); ?><?php endif; ?>" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="link" class="form-label">App store link</label>
+                            <input type="text" class="form-control" id="app_store_link" name="app_store_link" value="<?php if(!empty($game)): ?><?php echo e($game->app_store_link); ?><?php endif; ?>" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="link" class="form-label">Google Store Link</label>
+                            <input type="text" class="form-control" id="google_store_link" name="google_store_link" value="<?php if(!empty($game)): ?><?php echo e($game->google_store_link); ?><?php endif; ?>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="link" class="form-label">How to play</label>
+                            <input type="text" class="form-control" id="howtoplay" name="how_to_play" value="<?php if(!empty($game)): ?><?php echo e($game->how_to_play); ?><?php endif; ?>" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="link" class="form-label">Description</label>
+                            <input type="text" class="form-control" id="description" name="description" value="<?php if(!empty($game)): ?><?php echo e($game->description); ?><?php endif; ?>" required>
                         </div>
                         <div class="mb-3">
                             <label for="tags" class="form-label">Tags</label>

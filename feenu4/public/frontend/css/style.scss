@@ -608,11 +608,6 @@ main{min-height: 1330px;background: url(../images/bg/bg-img.jpg);background-size
                 li{img{width: 100%;}}
             }
         }
-
-
-
-
-
         .nit-content-new{padding: 1rem;
             ul{grid-template-columns: repeat(2, 1fr);li:first-child{grid-area: auto;}li.newGame a::before{padding: 2px;font-size: 10px;transform: rotate(-35deg) translate(-37px, -16px);}
             li{img{width: 100%;}}

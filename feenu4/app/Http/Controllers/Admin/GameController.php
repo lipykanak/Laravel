@@ -25,6 +25,11 @@ class GameController extends Controller
             $categoryId = $request->category;
             $ifameUrl = $request->ifame_url;
             $tags = $request->tags;
+            $walk_through_link = $request->walk_through_link;
+            $how_to_play = $request->how_to_play;
+            $description = $request->description;
+            $app_store_link = $request->app_store_link;
+            $google_store_link = $request->google_store_link; 
 
             $gameThumb = $request->file('game_thumb');
             $gameThumbPath = "";
@@ -41,6 +46,11 @@ class GameController extends Controller
             $game->category_id = $categoryId;
             $game->ifame_url = $ifameUrl;
             $game->tags = implode(',',$tags);
+            $game-> walk_through_link = $walk_through_link;
+            $game-> how_to_play =$how_to_play;
+            $game->description = $description;
+            $game-> app_store_link = $app_store_link;
+            $game-> google_store_link = $google_store_link; 
             $game->save();
             return redirect()->route('admin.games');
         }
@@ -68,11 +78,21 @@ class GameController extends Controller
             $categoryId = $request->category;
             $ifameUrl = $request->ifame_url;
             $tags = $request->tags;
+            $walk_through_link = $request->walk_through_link;
+            $how_to_play = $request->how_to_play;
+            $description = $request->description;
+            $app_store_link = $request->app_store_link;
+            $google_store_link = $request->google_store_link; 
 
             $game->name = $name;
             $game->category_id = $categoryId;
             $game->ifame_url = $ifameUrl;
             $game->tags = implode(',',$tags);
+            $game-> walk_through_link = $walk_through_link;
+            $game-> how_to_play =$how_to_play;
+            $game->description = $description;
+            $game-> app_store_link = $app_store_link;
+            $game-> google_store_link = $google_store_link; 
             $game->save();
             return redirect()->route('admin.games');
         }

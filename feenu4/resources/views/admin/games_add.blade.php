@@ -23,6 +23,10 @@
                     <form action="" method="post" enctype='multipart/form-data'>
                         @csrf
                         <div class="mb-3">
+                            <label for="name" class="form-label">Game Name</label>
+                            <input type="text" class="form-control" id="name" name="name" value="@if(!empty($game)){{$game->name}}@endif" required>
+                        </div>
+                        <div class="mb-3">
                             <label for="category" class="form-label">Category</label>
                             <select class="form-control" id="category" name="category" required>
                                 <option value="">Select Category</option>
@@ -31,18 +35,35 @@
                                 @endforeach
                             </select>
                         </div>
+                       
                         <div class="mb-3">
-                            <label for="name" class="form-label">Game Name</label>
-                            <input type="text" class="form-control" id="name" name="name" value="@if(!empty($game)){{$game->name}}@endif" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="link" class="form-label">Game Image</label>
+                            <label for="image" class="form-label">Game Image</label>
                             <input type="file" class="form-control" id="game_thumb" name="game_thumb" value="@if(!empty($game)) <img src={{asset($game->game_thumb)}} @endif">
 
                         </div>
                         <div class="mb-3">
-                            <label for="link" class="form-label">Game Url</label>
-                            <input type="text" class="form-control" id="ifame_url" name="ifame_url" value="@if(!empty($game)){{$game->ifame_url}}@endif" required>
+                            <label for="link" class="form-label">Iframe Url</label>
+                            <input type="text" class="form-control" id="ifame_url" name="ifame_url" value="@if(!empty($game)){{$game->ifame_url}}@endif" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="link" class="form-label">Walkthrough Video</label>
+                            <input type="text" class="form-control" id="walk_through_link" name="walk_through_link" value="@if(!empty($game)){{$game->walk_through_link}}@endif" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="link" class="form-label">App store link</label>
+                            <input type="text" class="form-control" id="app_store_link" name="app_store_link" value="@if(!empty($game)){{$game->app_store_link}}@endif" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="link" class="form-label">Google Store Link</label>
+                            <input type="text" class="form-control" id="google_store_link" name="google_store_link" value="@if(!empty($game)){{$game->google_store_link}}@endif">
+                        </div>
+                        <div class="mb-3">
+                            <label for="link" class="form-label">How to play</label>
+                            <input type="text" class="form-control" id="howtoplay" name="how_to_play" value="@if(!empty($game)){{$game->how_to_play}}@endif" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="link" class="form-label">Description</label>
+                            <input type="text" class="form-control" id="description" name="description" value="@if(!empty($game)){{$game->description}}@endif" required>
                         </div>
                         <div class="mb-3">
                             <label for="tags" class="form-label">Tags</label>

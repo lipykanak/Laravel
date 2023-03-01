@@ -40,6 +40,7 @@ use App\Http\Controllers\User\FCommentController;
 
 Route::get('/', [FrontController::class, 'index'])->name('frontend-index');
 Route::get('games/{gameId}', [FGameController::class, 'gameDetail'])->name('game-detail');
+Route::get('newgame', [FGameController::class, 'gameDetail'])->name('new-game');
 Route::get('about', [FAboutController::class, 'about'])->name('about');
 Route::get('privacy', [FPrivacyController::class, 'privacy'])->name('privacy');
 Route::get('dmca', [FDmcaController::class, 'dmca'])->name('dmca');

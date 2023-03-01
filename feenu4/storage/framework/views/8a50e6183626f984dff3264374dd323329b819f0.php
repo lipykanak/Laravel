@@ -66,8 +66,7 @@
                     </div>
                   <div class="item">
                       <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
-                    </div>
-                 
+                    </div>               
                  
                </div>
        
@@ -96,8 +95,7 @@
                      </div>
                       <div class="item">
                        <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
-                     </div>
-                 
+                    </div>                 
                </div>
            </div>
 

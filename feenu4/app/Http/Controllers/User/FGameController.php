@@ -26,6 +26,7 @@ class FGameController extends Controller
         $relatedGames = Game::where('category_id',$categoryId)->orderBy('game_id','DESC')->take(10)->get();
         $relatedGames1 = Game::where('category_id',$categoryId)->orderBy('game_id','DESC')->take(20)->get();
         $newGames = Game::orderBy('game_id','DESC')->take(10)->get();
+        $newGames1 = Game::orderBy('game_id','DESC')->take(30)->get();
 
         $favoriteStatus = 0;
         if(!empty($user)){
@@ -49,4 +50,5 @@ class FGameController extends Controller
             'likeStatus'=>$likeStatus
         ]);
     }
+    
 }
