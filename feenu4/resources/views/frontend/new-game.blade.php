@@ -25,6 +25,6 @@
 
                
                
-              </ul>
+            </ul>
         </div>
 @endsection
