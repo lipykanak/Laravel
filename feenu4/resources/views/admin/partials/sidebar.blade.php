@@ -43,6 +43,23 @@
             <i class="fas fa-fw fa-table"></i>
             <span>About</span></a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{route('admin.privacy')}}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Privacy</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Contact</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Dmca</span></a>
+    </li>
+
 
     <li class="nav-item">
         <a class="nav-link" href="{{route('admin.users')}}">

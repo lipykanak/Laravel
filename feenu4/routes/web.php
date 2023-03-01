@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\PrivacyController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\AboutController;
@@ -75,6 +76,10 @@ Route::group(['prefix' => 'feenu','as'=>'admin.', 'middleware' => ['auth','isAdm
     Route::post('/admin/profile/store', [AdminController::class, 'AdminProfileStore'])->name('admin.profile.store');
     Route::get('/admin/change/password', [AdminController::class, 'AdminChangePassword'])->name('admin.change.password');
     Route::post('/admin/update/password', [AdminController::class, 'AdminUpdatePassword'])->name('admin.update.password');
+    Route::get('privacy', [PrivacyController::class, 'privacy'])->name('privacy');
+    Route::match(['get','post'],'privacy/add', [PrivacyController::class, 'addprivacy'])->name('privacy-add');
+    Route::match(['get','post'],'Privacy/{id}', [PrivacyController::class, 'editprivacy'])->name('privacy-edit');
+    Route::match(['get','post'],'privacy/delete/{id}', [PrivacyController::class, 'deleteprivacy'])->name('privacy-delete');
 
     Route::get('comments', [CommentsController::class, 'comments'])->name('comments');
 });
