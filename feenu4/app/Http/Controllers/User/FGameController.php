@@ -24,6 +24,7 @@ class FGameController extends Controller
         $comments = Comment::where('game_id',$gameId)->where('parent_id',NULL)->orderBy('comment_id','DESC')->get();
         $categoryId = $game->category_id;
         $relatedGames = Game::where('category_id',$categoryId)->orderBy('game_id','DESC')->take(10)->get();
+        $relatedGames1 = Game::where('category_id',$categoryId)->orderBy('game_id','DESC')->take(20)->get();
         $newGames = Game::orderBy('game_id','DESC')->take(10)->get();
 
         $favoriteStatus = 0;
@@ -41,6 +42,7 @@ class FGameController extends Controller
         return view('frontend.game',[
             'game'=>$game,
             'relatedGames'=>$relatedGames,
+            'relatedGames1'=>$relatedGames1,
             'newGames'=>$newGames,
             'comments'=>$comments,
             'favoriteStatus'=>$favoriteStatus,

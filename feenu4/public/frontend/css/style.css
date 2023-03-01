@@ -1044,30 +1044,44 @@ main .nit-content ul li a figcaption {
 .nit-related {
   margin-top: 15px;
 }
-.nit-related.nit-related-profile .owl-nav button {
-  bottom: 30% !important;
-  border: 1px solid #328bdb !important;
+.nit-related.gGame .item:hover a {
+  border: 2px solid #fff;
 }
-.nit-related.nit-related-profile .owl-nav button.owl-prev {
-  left: -40px;
+.nit-related.gGame .item:hover a figcaption {
+  bottom: 0;
 }
-.nit-related.nit-related-profile .owl-nav button.owl-next {
-  right: -40px;
-}
-.nit-related .owl-nav button {
-  bottom: 30% !important;
-  border: 1px solid #328bdb !important;
-}
-.nit-related .owl-nav button.owl-prev {
-  left: -40px;
-}
-.nit-related .owl-nav button.owl-next {
-  right: -40px;
+.nit-related h5 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 .nit-related h1 {
   color: #fff;
   text-transform: uppercase;
   font-size: 18px;
+}
+.nit-related a {
+  position: relative;
+  display: block;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  overflow: hidden;
+}
+.nit-related a figcaption {
+  position: absolute;
+  width: 100%;
+  bottom: -50%;
+  left: 0;
+  background: #302b2a;
+  padding: 6px 5px;
+  font-size: 14px;
+  color: #ffcc00;
+  text-align: center;
+  font-weight: 600;
+}
+.nit-related ul {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
 }
 .nit-related ul li {
   max-width: 100% !important;
@@ -1096,25 +1110,6 @@ main .nit-content ul li a figcaption {
 }
 .nit-related ul li:hover a figcaption {
   bottom: 0;
-}
-.nit-related ul li a {
-  position: relative;
-  display: block;
-  border-radius: 10px;
-  border: 2px solid transparent;
-  overflow: hidden;
-}
-.nit-related ul li a figcaption {
-  position: absolute;
-  width: 100%;
-  bottom: -40%;
-  left: 0;
-  background: #302b2a;
-  padding: 6px 5px;
-  font-size: 14px;
-  color: #ffcc00;
-  text-align: center;
-  font-weight: 600;
 }
 
 #newMobileMenu {

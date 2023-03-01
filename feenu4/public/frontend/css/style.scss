@@ -462,30 +462,25 @@ main{min-height: 1330px;background: url(../images/bg/bg-img.jpg);background-size
     }
 }
 .nit-related{margin-top: 15px;
-    &.nit-related-profile{
-        .owl-nav button{bottom: 30% !important;border: 1px solid #328bdb !important;
-            &.owl-prev{left: -40px;}
-            &.owl-next{right: -40px;}
-        }
+    &.gGame{
+        .item:hover{a{border: 2px solid #fff;figcaption{bottom: 0;}}}
     }
-    .owl-nav button{bottom: 30% !important;border: 1px solid #328bdb !important;
-        &.owl-prev{left: -40px;}
-        &.owl-next{right: -40px;}
-    }
+    h5{font-size: 24px;font-weight: 700;margin-bottom: 15px;}
     h1{color: #fff;text-transform: uppercase;font-size: 18px;}
-    ul{
-        //display: grid;grid-template-columns: repeat(6, 1fr);
+    a{position: relative;display: block;border-radius: 10px;border: 2px solid transparent;overflow: hidden;
+        img{}
+        figcaption{position: absolute;width: 100%;bottom: -50%;left: 0;background: #302b2a;padding: 6px 5px;font-size: 14px;color: #ffcc00;text-align: center;font-weight: 600;}
+    }
+//    .item:hover{a{border: 2px solid #fff;figcaption{bottom: 0;}}}
+    ul{display: grid;grid-template-columns: repeat(6, 1fr);
         li{max-width: 100% !important;margin: 2px;
-
+                
                 .nit-ads{max-width: 100% !important;}
                 &.newGame{
                     a::before{background: #ffcc00;color: #000;padding: 5px;position: absolute;content: 'New';text-transform: uppercase;font-size: 13px;font-weight: 700;width: 100%;text-align: center;    transform: rotate(-35deg) translate(-30px,-16px);box-shadow: 0 0 7px #000;z-index: 1;}
                 }
                 &:hover{a{border: 2px solid #fff;figcaption{bottom: 0;}}}
-                a{position: relative;display: block;border-radius: 10px;border: 2px solid transparent;overflow: hidden;
-                    img{}
-                    figcaption{position: absolute;width: 100%;bottom: -40%;left: 0;background: #302b2a;padding: 6px 5px;font-size: 14px;color: #ffcc00;text-align: center;font-weight: 600;}
-                }
+                
             }
     }
 }

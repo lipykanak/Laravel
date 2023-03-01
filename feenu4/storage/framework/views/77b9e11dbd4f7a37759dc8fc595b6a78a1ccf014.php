@@ -27,7 +27,7 @@
                                         
                                     
                                         <button onclick="navigate()" class="btn">
-                                            <figcaption><a href="<?php echo e($game->ifame_url); ?>" target="iframe_a" class="btn" >Play Game</a>
+                                            <figcaption><a href="<?php echo e($game->ifame_url); ?>" target="iframe_a" class="btn">Play Game</a>
                                                 <h2><?php echo e($game->name); ?></h2>
                                             </figcaption>
                                     </button>
@@ -36,7 +36,7 @@
                                         -webkit-background-size: cover;
                                         -moz-background-size: cover;
                                         -o-background-size: cover;
-                                        background-size: cover;"> 
+                                        background-size: cover;" src="<?php echo e($game->ifame_url); ?>"> 
                                     </iframe>
                                 </div>
                                
@@ -68,9 +68,13 @@
                                             }
 
                                         ?>
-                                        <li class="favorite-btn" data-url="<?php echo e(route('update-favorite-status')); ?>"  data-game-id="<?php echo e($game->game_id); ?>" data-favorite-status=<?php if($favoriteStatus): ?> "0" <?php else: ?> "1" <?php endif; ?>><i class="<?php if($favoriteStatus): ?> fas <?php else: ?> far <?php endif; ?> fa-heart" style="color: red;cursor: pointer;" ></i></li>
+                                      
+
                                         <li class="like-dislike-btn like-btn" data-url="<?php echo e(route('update-like-status')); ?>"  data-game-id="<?php echo e($game->game_id); ?>" data-like-status="1"><i class="<?php echo e($likeBtnClass); ?> fa-thumbs-up" style="cursor: pointer;"></i><span><?php echo e($game->likeCount()); ?></span></li>
                                         <li class="like-dislike-btn dislike-btn" data-url="<?php echo e(route('update-like-status')); ?>"  data-game-id="<?php echo e($game->game_id); ?>" data-like-status="0"><i class="<?php echo e($dislikeBtnClass); ?> fa-thumbs-down" style="cursor: pointer;"></i><span><?php echo e($game->dislikeCount()); ?></span></li>
+                                        <li class="favorite-btn" data-url="<?php echo e(route('update-favorite-status')); ?>"  data-game-id="<?php echo e($game->game_id); ?>" data-favorite-status=<?php if($favoriteStatus): ?> "0" <?php else: ?> "1" <?php endif; ?>>Favorite<i class="<?php if($favoriteStatus): ?> fas <?php else: ?> far <?php endif; ?> fa-heart" style="color: red;cursor: pointer;" ></i></li>
+                                        <li><span>Report</span><i class="fa fa-exclamation-triangle" style="font-size:14px;color:rgb(241, 199, 10)"></i></li>
+                                        
                                         <div class="shareBox">
                                              
                                             <button onclick="myFunction()" id="myBtn">share<i class="fa fa-share" style="font-size:14px;color:rgb(22, 189, 97)"></i></button>
@@ -173,17 +177,19 @@
 
                 <div class="nit-related">
                     <h1>related games</h1>
-                    <div class="owl-carousel related-carousel1 owl-theme">
-                        <?php $__currentLoopData = $relatedGames; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $relatedGame): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                            <div class="item">
+                    <div class="owl-carousel related-carousel owl-theme">
+                        <div class="item">
                                 <ul>
+                                    <?php $__currentLoopData = $relatedGames1; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $relatedGame): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <li><a href="<?php echo e(route('game-detail', ['gameId' => $relatedGame->game_id])); ?>"><img
                                                 src="<?php echo e(asset($relatedGame->game_thumb)); ?>" alt="">
                                             <figcaption><?php echo e($relatedGame->shortName()); ?></figcaption>
                                         </a></li>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                      
                                 </ul>
-                            </div>
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </div>
+                     
                     </div>
 
                 </div>

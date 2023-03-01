@@ -28,7 +28,7 @@
                                         {{-- <img src="{{url('frontend/images/more/v1.png')}}" width="100%"> --}}
                                     
                                         <button onclick="navigate()" class="btn">
-                                            <figcaption><a href="{{ $game->ifame_url }}" target="iframe_a" class="btn" >Play Game</a>
+                                            <figcaption><a href="{{ $game->ifame_url }}" target="iframe_a" class="btn">Play Game</a>
                                                 <h2>{{ $game->name }}</h2>
                                             </figcaption>
                                     </button>
@@ -37,7 +37,7 @@
                                         -webkit-background-size: cover;
                                         -moz-background-size: cover;
                                         -o-background-size: cover;
-                                        background-size: cover;"> 
+                                        background-size: cover;" src="{{ $game->ifame_url }}"> 
                                     </iframe>
                                 </div>
                                
@@ -69,9 +69,13 @@
                                             }
 
                                         @endphp
-                                        <li class="favorite-btn" data-url="{{route('update-favorite-status')}}"  data-game-id="{{$game->game_id}}" data-favorite-status=@if($favoriteStatus) "0" @else "1" @endif><i class="@if($favoriteStatus) fas @else far @endif fa-heart" style="color: red;cursor: pointer;" ></i></li>
+                                      
+
                                         <li class="like-dislike-btn like-btn" data-url="{{route('update-like-status')}}"  data-game-id="{{$game->game_id}}" data-like-status="1"><i class="{{$likeBtnClass}} fa-thumbs-up" style="cursor: pointer;"></i><span>{{$game->likeCount()}}</span></li>
                                         <li class="like-dislike-btn dislike-btn" data-url="{{route('update-like-status')}}"  data-game-id="{{$game->game_id}}" data-like-status="0"><i class="{{$dislikeBtnClass}} fa-thumbs-down" style="cursor: pointer;"></i><span>{{$game->dislikeCount()}}</span></li>
+                                        <li class="favorite-btn" data-url="{{route('update-favorite-status')}}"  data-game-id="{{$game->game_id}}" data-favorite-status=@if($favoriteStatus) "0" @else "1" @endif>Favorite<i class="@if($favoriteStatus) fas @else far @endif fa-heart" style="color: red;cursor: pointer;" ></i></li>
+                                        <li><span>Report</span><i class="fa fa-exclamation-triangle" style="font-size:14px;color:rgb(241, 199, 10)"></i></li>
+                                        
                                         <div class="shareBox">
                                              
                                             <button onclick="myFunction()" id="myBtn">share<i class="fa fa-share" style="font-size:14px;color:rgb(22, 189, 97)"></i></button>
@@ -174,17 +178,19 @@
 
                 <div class="nit-related">
                     <h1>related games</h1>
-                    <div class="owl-carousel related-carousel1 owl-theme">
-                        @foreach ($relatedGames as $relatedGame)
-                            <div class="item">
+                    <div class="owl-carousel related-carousel owl-theme">
+                        <div class="item">
                                 <ul>
+                                    @foreach ($relatedGames1 as $relatedGame)
                                     <li><a href="{{ route('game-detail', ['gameId' => $relatedGame->game_id]) }}"><img
                                                 src="{{ asset($relatedGame->game_thumb) }}" alt="">
                                             <figcaption>{{ $relatedGame->shortName() }}</figcaption>
                                         </a></li>
+                                        @endforeach
+                                      
                                 </ul>
-                            </div>
-                        @endforeach
+                        </div>
+                     
                     </div>
 
                 </div>

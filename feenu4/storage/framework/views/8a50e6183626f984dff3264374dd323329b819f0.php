@@ -6,9 +6,11 @@
     <div class="nit-card">
         <aside class="col-md-8">
             <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             <div class="profile-card-body">
+             
                  <a href="<?php echo e(route('editprofile')); ?>"><i class="fas fa-edit" placeholder="edit_profile"></i></a>
-               
+              
                 <div class="row">
                     <div class="col-md-4">
                         <label><a href="https://placeholder.com"><img src="https://via.placeholder.com/200"></a></label>
@@ -24,160 +26,82 @@
 
 
                     </div>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+             
 
                 </div>
-                <!-- start slider-->
-
-                <div class="nit-related nit-related-profile">
-                    <div class="owl-carousel related-carousel1 owl-theme">
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
+               <!-- start slider-->
+               
+               <div class="nit-related gGame">
+                <h6 class="lightBlue">Last Played Games</h6>
+           <div class="owl-carousel lastPlayed-carousel owl-theme">
+                  <div class="item">
+                      <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
                     </div>
-                    <div class="owl-carousel related-carousel2 owl-theme">
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <div class="item">
-                            <ul class="nit-flex">
-                                <li><a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt="">
-                                <figcaption>ROAD</figcaption>
-                                </a></li>
-                            </ul>
-                        </div>
+                  <div class="item">
+                      <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
                     </div>
-                </div>
+                  <div class="item">
+                      <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
+                    </div>
+                  <div class="item">
+                      <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
+                    </div>
+                  <div class="item">
+                      <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
+                    </div>
+                  <div class="item">
+                      <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
+                    </div>
+                  <div class="item">
+                      <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
+                    </div>
+                     <div class="item">
+                      <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
+                    </div>
+                  <div class="item">
+                      <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
+                    </div>
+                     <div class="item">
+                      <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
+                    </div>
+                  <div class="item">
+                      <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
+                    </div>
+                 
+                 
+               </div>
+       
+               <h6 style="color:rgb(240, 199, 20)">Favorite Games</h6>
+               <div class="owl-carousel fvt-carousel owl-theme">
+                   <div class="item">
+                       <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
+                     </div>
+                   <div class="item">
+                       <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
+                     </div>
+                   <div class="item">
+                       <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
+                     </div>
+                   <div class="item">
+                       <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
+                     </div>
+                   <div class="item">
+                       <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
+                     </div>
+                   <div class="item">
+                       <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
+                     </div>
+                   <div class="item">
+                       <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
+                     </div>
+                      <div class="item">
+                       <a href="game.html"><img src="<?php echo e(('frontend/images/more/i1.png')); ?>" alt=""><figcaption>ROAD</figcaption></a>
+                     </div>
+                 
+               </div>
+           </div>
 
-                <!-- end slider-->
-
+           <!-- end slider-->
             </div>
         </aside>
 
