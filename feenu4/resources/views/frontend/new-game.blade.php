@@ -15,7 +15,7 @@
                
                 <li class="newGame"><a href="{{url('/game')}}"><img src="{{url('frontend/images/more/i6.png')}}"  alt=""><figcaption>ROAD</figcaption></a></li>
                 <li class="newGame"><a href="{{url('/game')}}"><img src="{{url('frontend/images/more/i1.png')}}"  alt=""><figcaption>ROAD</figcaption></a></li>
-               
+                <li class="newGame"><a href="{{url('/game')}}"><img src="{{url('frontend/images/more/i1.png')}}"  alt=""><figcaption>ROAD</figcaption></a></li>
                
               </ul>
         </div>
